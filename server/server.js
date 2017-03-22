@@ -61,20 +61,10 @@ app.delete('/todos/:id', (req, res) =>{
       return res.status(404).send();
     }
 
-    res.send(todo);
+    res.send({todo});
   }).catch((e) =>{
     res.status(400).send();
   });
-  //get the id
-
-  //validate the id -> not valid? return 404
-
-  //remove todo by id
-    //success
-      //if no doc, send 404
-      //if doc, send doc back with 200
-    // error
-      //400 with empty body
 });
 
 app.listen(port, () =>{
